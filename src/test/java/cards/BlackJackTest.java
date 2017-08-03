@@ -25,5 +25,17 @@ public class BlackJackTest {
     }
 
     @Test
-    public void CardPoint_correlate
+    public void CardPoint_correlateCardToPoints_10(){
+        BlackJack testAdventure = new BlackJack();
+        ArrayList<Integer>expectedPoint = new ArrayList<Integer>();
+        expectedPoint.add(10);
+        assertEquals(expectedPoint, testAdventure.CardPoint("HeartsKing"));
+    }
+
+    @Test
+    public void DealCardPoint_dealCardToUser_HeartsKing(){
+        BlackJack testAdventure = new BlackJack();
+        int expectedCardPoint = 10;
+        assertEquals(expectedCardPoint, testAdventure.DealCardPoint("HeartsKing"));
+    }
 }
